@@ -1,82 +1,43 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Form</title>
-	<link rel="stylesheet" href="">
-</head>
-<body>
-
-<form id="ambil_warna" name="ambil_warna" onsubmit="return false">
-<label for="warna">Pilih Warna Anda</label>
-<select id="ambil_warna" name="warna">
-  <option value=""></option>
-  <option value="merah">merah</option>
-  <option value="kuning">kuning</option>
-  <option value="hijau">hijau</option>
-  <option value="unggu">unggu</option>
-</select>
-<input type="submit" value="Tampilkan warna" onclick="tampilkan_warna()">
-</form>	
-<div id="tampilkan_warna" ></div>
-
-<script>
-
-
-
-function tampilkan_warna () {
-
-var nama_warna = document.getElementById("ambil_warna").ambil_warna.value;
-var tampil_warna1 = document.getElementById("tampilkan_warna");
-
-	if (nama_warna == "merah") {
-	 	tampil_warna1.innerHTML="merah";
-	 } else {
-	 	tampil_warna1.innerHTML="bukan merah";
-	 } 
-}
-
-</script>
-
-
-<h2>Menampilkan Hasil Form HTML dengan JavaScript</h2>
- 
-<form id="form1" name="form1" onsubmit="return false">
-  <label for="select1">Pilih Kota: </label>
-  <select id="select1" name="select1">
-    <option value="jakarta">Jakarta</option>
-    <option value="bandung">Bandung</option>
-    <option value="bogor">Bogor</option>
-  </select>
-  <input type="submit" value="Tampilkan Keterangan" onclick="tampilkan()">
-</form>
- 
-<p id="container"></p>
- 
-
-
- <script>
-function tampilkan(){
- 
-  var nama_kota=document.getElementById("form1").select1.value;
-  var p_kontainer=document.getElementById("container");
- 
-  if (nama_kota=="jakarta")
-    {
-        p_kontainer.innerHTML="Jakarta Ibu kota Republik Indonesia";
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Form</title>
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+    <form id="ambil_warna" name="ambil_warna" onsubmit="return false">
+      <label for="warna">Pilih Warna Anda</label>
+      <select id="ambil_warna" name="warna">
+        <option value=""></option>
+        <option value="merah">merah</option>
+        <option value="hitam">hitam</option>
+        <option value="hijau">hijau</option>
+        <option value="putih">putih</option>
+      </select>
+      <input type="submit" value="Tampilkan warna" onclick="tampilkan_warna()">
+      <div></div>
+    </form>
+    <div id="tampilkan_warna" ></div>
+    <script>
+    function tampilkan_warna () {
+    var nama_warna = document.getElementById("ambil_warna").ambil_warna.value;
+    var tampil_warna1 = document.getElementById("tampilkan_warna");
+    if (nama_warna == "merah") {
+    tampil_warna1.innerHTML="merah";
     }
-  else if (nama_kota=="bandung")
-    {
-        p_kontainer.innerHTML="Bandung kota kembang";
+    else if (nama_warna == "hitam") {
+    tampil_warna1.innerHTML="hitam";
     }
-  else if (nama_kota=="bogor")
-    {
-        p_kontainer.innerHTML="Bogor kota hujan";
+    else if (nama_warna == "hijau"){
+    tampil_warna1.innerHTML="hijau";
     }
-}
-</script> 
-
-	
-</body>
+    else if (nama_warna == "putih"){
+    tampil_warna1.innerHTML="putih";
+    }
+    }
+    </script>
+    
+  </body>
 </html>
